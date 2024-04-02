@@ -1,6 +1,6 @@
-import Subscription from "../models/subscription.model";
-import Attendance from "../models/attendance.model";
-import Group from "../models/group.model";
+import Subscription from "../subscription/subscription.model";
+import Attendance from "../attendance/attendance.model";
+import Group from "../group/group.model";
 import User from "../user/user.model";
 import Card from "../card/card.model";
 

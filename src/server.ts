@@ -1,5 +1,5 @@
 import polka from 'polka';
-import UserService from '../user/user.service';
+import UserService from './user/user.service';
 
 const server = polka();
 

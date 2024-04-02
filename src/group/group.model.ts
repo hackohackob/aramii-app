@@ -7,6 +7,7 @@ interface GroupAttributes {
   name: string;
   days: string; // Days of the week as a comma-separated string
   hour: string; // Hour of the day
+  archived: boolean;
 }
 
 type GroupCreationAttributes = Optional<GroupAttributes, "id">
@@ -16,6 +17,7 @@ class Group extends Model<GroupAttributes, GroupCreationAttributes> implements G
   public name!: string;
   public days!: string;
   public hour!: string;
+  public archived!: boolean;
 
   public readonly createdAt!: Date;
   public readonly updatedAt!: Date;
@@ -42,6 +44,11 @@ Group.init({
   hour: {
     type: new DataTypes.STRING(128),
     allowNull: false,
+  },
+  archived: {
+    type: DataTypes.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
   }
 }, {
   tableName: "groups",

@@ -2,9 +2,9 @@
 import { Model, DataTypes, Optional } from 'sequelize';
 import sequelize from '../database';
 import User from '../user/user.model';
-import Group from './group.model';
+import Group from '../group/group.model';
 import Card from '../card/card.model';
-import Subscription from './subscription.model';
+import Subscription from '../subscription/subscription.model';
 
 interface AttendanceAttributes {
   id: number;
